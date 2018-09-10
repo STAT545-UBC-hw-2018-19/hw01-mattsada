@@ -1,0 +1,9 @@
+---  
+title: "Homework 01"  
+author: "Adam Mattsson"  
+date: "`r format(Sys.Date())`"
+output: github_document
+keep_md: true
+message: FALSE
+Warnings: FALSE
+---  
