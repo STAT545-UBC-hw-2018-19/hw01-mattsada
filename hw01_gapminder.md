@@ -1,7 +1,7 @@
 Homework 01
 ================
 Adam Mattsson
-2018-09-10
+2018-09-13
 
 R Markdown for Gapminder exploration
 ====================================
@@ -84,6 +84,8 @@ summary(gapminder$gdpPercap)
 Data visualization
 ------------------
 
+Let's start by plotting life expectancy vs year (for all the data).
+
 ``` r
 plot(lifeExp ~ year, gapminder)
 title(main = "Life Expectancy vs Year")
@@ -91,7 +93,7 @@ title(main = "Life Expectancy vs Year")
 
 ![](hw01_gapminder_files/figure-markdown_github/unnamed-chunk-5-1.png)
 
-The UN recorded GDP per capita in the available data, and therefore we can look to see how strong the correlation between wealth and life expectancy really is.
+The gapminder dataset also contains information such as GDP per capita. Let's investigate the correlation between wealth and life expectancy.
 
 ``` r
 plot(lifeExp ~ gdpPercap, gapminder)
@@ -100,7 +102,7 @@ title(main = "Life Expectancy vs GDP per Capita")
 
 ![](hw01_gapminder_files/figure-markdown_github/unnamed-chunk-6-1.png)
 
-This data is difficult to interpret with the current axes, perhaps a log scale plot of GDP per capita will improve the visualization:
+The current axes makes it hard to interpret the data. If we log transform GDP per capita, this will improve the visualization.
 
 ``` r
 plot(lifeExp ~ log(gdpPercap), gapminder)
