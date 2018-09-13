@@ -34,8 +34,8 @@ The `gapminder` dataset is a massive UN database that compares the populations, 
 
 | **Title** | **Format** | **Link** |
 | --------- |------------|----------|
-|Gapminder dataset exploration|Markdown (.md)| [link]()|
-|R markdown source code|R markdown (.Rmd)| [link]()|
+|Gapminder dataset exploration|Markdown (.md)| [link](https://github.com/STAT545-UBC-students/hw01-mattsada/blob/master/hw01_gapminder.md)|
+|R markdown source code|R markdown (.Rmd)| [link](https://github.com/STAT545-UBC-students/hw01-mattsada/blob/master/hw01_gapminder.Rmd)|
 
 ## Reflections and thoughts
 All changes was made in Rstudio (Version 1.1.453) and then pushed to Github.  
