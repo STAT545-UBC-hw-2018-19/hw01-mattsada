@@ -1,0 +1,78 @@
+---  
+title: "Homework 01"  
+author: "Adam Mattsson"  
+date: "`r format(Sys.Date())`"
+output: github_document
+keep_md: true
+message: FALSE
+Warnings: FALSE
+---
+# R Markdown for Gapminder exploration
+Make an R Markdown document that explores a dataset, such as gapminder seen in class. You don’t need an extensive exploration in order to get a good grade here; a basic one will do, not unlike the one done in class, which would be considered sufficient (but less so the more verbatim your submission is). Render your R Markdown to the github_document output format. Commit both the .Rmd and .md files and push them to GitHub.
+
+First, lets load the packages/data necessary for exploratory analysis. The `gapminder` dataset is a massive UN database that compares the populations, gdp per capita, and life expectancy for most countries in 5 year incriments between 1952 and 2007.
+```{r}
+library(gapminder)
+```
+
+## Small test the data
+In this first section we will explore the dataset and its variables. It's always a good idea to innitially start with these type of basic exploratory anaysis to get a feel for the data, such as number of variables (and associated data types), observations and sample distribution etc. 
+```{r}
+typeof(gapminder)
+ncol(gapminder)
+nrow(gapminder)
+```
+An easier way to get the same information is to make use of the `str()` argument, as such:
+```{r}
+str(gapminder)
+```
+It could also be useful to individualy inspect the different variables in the dataset. This might shed some light on the actual structure of the data and what the different levels of the variables are.
+```{r}
+summary(gapminder$continent)
+summary(gapminder$year)
+summary(gapminder$lifeExp)
+summary(gapminder$gdpPercap)
+```
+## Data visualization
+Let's start by plotting life expectancy vs year (for all the data).
+```{r}
+plot(lifeExp ~ year, gapminder)
+title(main = "Life Expectancy vs Year")
+```
+
+The gapminder dataset also contains information such as GDP per capita. Let's investigate the correlation between wealth and life expectancy.
+```{r}
+plot(lifeExp ~ gdpPercap, gapminder)
+title(main = "Life Expectancy vs GDP per Capita")
+```
+
+The current axes makes it hard to interpret the data. If we log transform GDP per capita, this will improve the visualization.
+```{r}
+plot(lifeExp ~ log(gdpPercap), gapminder)
+title(main = "Semilog scale: Life Expectancy vs GDP per Capita")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
